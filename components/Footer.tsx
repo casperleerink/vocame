@@ -15,6 +15,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
             Website door{" "}
             <a
               href="https://casperleerink.com/"
+              rel="noreferrer"
               target="_blank"
               className="hover:text-salmon transition-colors"
             >
@@ -64,9 +65,12 @@ const Footer: React.FC<FooterProps> = ({}) => {
               bestuur@vocame.nl
             </a>{" "}
             of vul het{" "}
-            <a href="/contact" className="hover:text-salmon transition-colors">
+            <Link
+              href="/contact"
+              className="hover:text-salmon transition-colors"
+            >
               contactformulier
-            </a>{" "}
+            </Link>{" "}
             in.
           </p>
         </div>

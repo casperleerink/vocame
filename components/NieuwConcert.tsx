@@ -27,14 +27,12 @@ const NieuwConcert: React.FC<NieuwConcertProps> = ({ concert }) => {
         />
         {bestelLink && (
           <div>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
               href={bestelLink}
               className="bg-salmon text-yellow-100 px-5 py-2 rounded"
             >
               Bestel Kaarten
-            </a>
+            </Link>
           </div>
         )}
       </div>
@@ -44,6 +42,7 @@ const NieuwConcert: React.FC<NieuwConcertProps> = ({ concert }) => {
             src={image.asset.url}
             width={image.asset.metadata.dimensions.width}
             height={image.asset.metadata.dimensions.height}
+            alt={image.asset.altText ? image.asset.altText : "Foto van concert"}
           />
         )}
       </div>

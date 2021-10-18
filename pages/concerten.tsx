@@ -12,12 +12,10 @@ const Concerten: NextPage = ({ data }: any) => {
       description={"Bekijk de concerten van projectkoort Voca Me"}
     >
       <div className="p-5 md:p-10">
-        {concerten.map((c) => {
+        {concerten.map((c: any) => {
           const date = new Date(c.date);
           if (date > new Date()) {
             return <NieuwConcert concert={c} key={c._id} />;
-          } else {
-            return <OudConcert concert={c} key={c._id} />;
           }
         })}
       </div>
